@@ -1,0 +1,12 @@
+<%- include("partials/header.ejs"); %>
+
+<h1>Home</h1>
+<p><%= homeContent %></p>
+
+<%  postItems.forEach(function(postItem){ %>
+    <h3><%= postItem.Title %></h3>
+    <p style="display: inline;"><%= postItem.Content.substring(0,100) + " ..." %></p>
+    <a href="/posts/<%= postItem.Title %>">ReadMore</a>
+<%  }) %>
+
+<%- include("partials/footer.ejs"); -%>
